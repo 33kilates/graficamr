@@ -1,0 +1,196 @@
+/* ===================================================
+   BottomCta — Seção final de conversão
+   =================================================== */
+
+.bottom-cta {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--mr-blue) 0%, #091e6b 100%);
+  padding: 4rem 1.25rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* ---------- Formas decorativas ---------- */
+
+.bottom-cta__shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.07;
+  background: #fff;
+}
+
+.bottom-cta__shape--1 {
+  width: 340px;
+  height: 340px;
+  top: -120px;
+  left: -100px;
+}
+
+.bottom-cta__shape--2 {
+  width: 200px;
+  height: 200px;
+  bottom: -60px;
+  right: -50px;
+  border-radius: 30%;
+  transform: rotate(25deg);
+}
+
+.bottom-cta__shape--3 {
+  width: 120px;
+  height: 120px;
+  top: 40%;
+  right: 10%;
+  border-radius: 20%;
+  transform: rotate(-15deg);
+  opacity: 0.05;
+}
+
+/* ---------- Conteúdo ---------- */
+
+.bottom-cta__content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ---------- Título ---------- */
+
+.bottom-cta__title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #fff;
+}
+
+/* ---------- Subtítulo ---------- */
+
+.bottom-cta__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  max-width: 640px;
+}
+
+/* ---------- Trust items ---------- */
+
+.bottom-cta__trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.bottom-cta__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+
+.bottom-cta__check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--mr-green, #00973a);
+  flex-shrink: 0;
+}
+
+/* ---------- Botão CTA ---------- */
+
+.bottom-cta__button.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 1.1rem 2.8rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--mr-green, #00973a);
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 151, 58, 0.35);
+  animation: cta-pulse 2.2s ease-in-out infinite;
+}
+
+.bottom-cta__button.btn-whatsapp:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 151, 58, 0.45);
+}
+
+.bottom-cta__button.btn-whatsapp:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 24px rgba(0, 151, 58, 0.35);
+  }
+  50% {
+    box-shadow: 0 4px 36px rgba(0, 151, 58, 0.55),
+                0 0 0 8px rgba(0, 151, 58, 0.1);
+  }
+}
+
+/* ---------- Horário ---------- */
+
+.bottom-cta__hours {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* ===================================================
+   Responsivo — Desktop (≥ 768px)
+   =================================================== */
+
+@media (min-width: 768px) {
+  .bottom-cta {
+    padding: 5.5rem 2rem;
+  }
+
+  .bottom-cta__title {
+    font-size: 3rem;
+  }
+
+  .bottom-cta__subtitle {
+    font-size: 1.15rem;
+  }
+
+  .bottom-cta__button.btn-whatsapp {
+    padding: 1.2rem 3.2rem;
+    font-size: 1.15rem;
+  }
+}

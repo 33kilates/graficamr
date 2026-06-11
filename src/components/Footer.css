@@ -1,0 +1,223 @@
+/* ============================================================
+   Footer — MR Gráfica e Embalagens
+   Mobile-first | 4 colunas em desktop | Dark premium
+   ============================================================ */
+
+.mr-footer {
+  background: var(--text-dark, #1a1a2e);
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Inter', sans-serif;
+  padding-top: 80px;
+}
+
+/* ── Container interno ── */
+.mr-footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+/* ── Logo SVG ── */
+.mr-footer__logo {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.mr-footer__logo-svg {
+  width: 180px;
+  height: auto;
+}
+
+/* ── Descrição da marca ── */
+.mr-footer__desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 320px;
+  margin-bottom: 24px;
+}
+
+/* ── Redes sociais ── */
+.mr-footer__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.mr-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.mr-footer__social-link:hover {
+  background: var(--mr-red, #910f36);
+  border-color: var(--mr-red, #910f36);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ── Títulos das colunas ── */
+.mr-footer__col-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.mr-footer__col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: var(--mr-red, #910f36);
+}
+
+/* ── Listas de links ── */
+.mr-footer__link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mr-footer__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.mr-footer__link:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+/* ── Lista de contato ── */
+.mr-footer__contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mr-footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+a.mr-footer__contact-item:hover {
+  color: #ffffff;
+}
+
+.mr-footer__contact-item svg {
+  flex-shrink: 0;
+  color: var(--mr-red, #910f36);
+}
+
+/* ── Barra inferior ── */
+.mr-footer__bottom {
+  margin-top: 56px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 32px 0;
+}
+
+.mr-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+.mr-footer__copyright {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.mr-footer__tagline {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+
+/* ============================================================
+   Responsivo — Tablet (≥ 600px)
+   ============================================================ */
+@media (min-width: 600px) {
+  .mr-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 40px;
+  }
+
+  .mr-footer__col--brand {
+    grid-column: 1 / -1;
+  }
+
+  .mr-footer__bottom-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ============================================================
+   Responsivo — Desktop (≥ 960px)
+   ============================================================ */
+@media (min-width: 960px) {
+  .mr-footer__inner {
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+    gap: 32px 48px;
+  }
+
+  .mr-footer__col--brand {
+    grid-column: auto;
+  }
+}
+
+/* ============================================================
+   Responsivo — Desktop largo (≥ 1280px)
+   ============================================================ */
+@media (min-width: 1280px) {
+  .mr-footer__inner {
+    padding: 0 40px;
+    gap: 32px 64px;
+  }
+
+  .mr-footer__bottom-inner {
+    padding: 0 40px;
+  }
+}

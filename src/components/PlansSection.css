@@ -1,0 +1,319 @@
+/* ========================================
+   PlansSection — Seção de Planos/Pricing
+   Mobile-first, responsivo
+   ======================================== */
+
+.plans-section {
+  padding: 80px 20px;
+  background: var(--bg-light, #f4f6fa);
+  position: relative;
+  overflow: visible;
+}
+
+.plans-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Header ────────────────────────────── */
+.plans-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+.plans-tag {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--mr-blue, #0f35a0);
+  background: rgba(15, 53, 160, 0.08);
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.plans-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--mr-blue, #0f35a0);
+  margin: 0 0 16px;
+}
+
+.plans-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-body, #4a4a5a);
+  margin: 0;
+}
+
+/* ── Grid de cards ─────────────────────── */
+.plans-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 48px;
+  position: relative;
+  align-items: start;
+}
+
+/* ── Card base ─────────────────────────── */
+.plan-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e8e8ee);
+  border-radius: 20px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.plan-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* ── Card featured (Anual) ─────────────── */
+.plan-card--featured {
+  background: linear-gradient(160deg, var(--mr-blue, #0f35a0) 0%, #0a2878 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 12px 40px rgba(15, 53, 160, 0.3);
+  order: -1;
+}
+
+.plan-card--featured:hover {
+  box-shadow: 0 16px 48px rgba(15, 53, 160, 0.4);
+  transform: translateY(-4px);
+}
+
+/* ── Badge ────────────────────────────── */
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--mr-green, #00973a);
+  padding: 6px 22px;
+  border-radius: 100px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* ── Ícone ─────────────────────────────── */
+.plan-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: rgba(15, 53, 160, 0.08);
+  color: var(--mr-blue, #0f35a0);
+}
+
+.plan-card--featured .plan-icon-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ── Textos do card ────────────────────── */
+.plan-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-dark, #1a1a2e);
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.plan-card--featured .plan-name { color: #ffffff; }
+
+.plan-subtitle {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--mr-blue, #0f35a0);
+  margin-bottom: 14px;
+}
+
+.plan-card--featured .plan-subtitle { color: rgba(255, 255, 255, 0.7); }
+
+.plan-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-body, #4a4a5a);
+  margin: 0;
+}
+
+.plan-card--featured .plan-description { color: rgba(255, 255, 255, 0.85); }
+
+/* ── Divisor ───────────────────────────── */
+.plan-divider {
+  border: none;
+  height: 1px;
+  background: var(--border-color, #e8e8ee);
+  margin: 24px 0;
+}
+
+.plan-card--featured .plan-divider { background: rgba(255, 255, 255, 0.15); }
+
+/* ── Lista de bullets ──────────────────── */
+.plan-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-grow: 1;
+}
+
+.plan-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-body, #4a4a5a);
+}
+
+.plan-card--featured .plan-bullet { color: rgba(255, 255, 255, 0.92); }
+
+.plan-bullet-icon {
+  flex-shrink: 0;
+  color: var(--mr-green, #00973a);
+  margin-top: 1px;
+}
+
+.plan-card--featured .plan-bullet-icon { color: #ffffff; }
+
+/* ── CTA ───────────────────────────────── */
+.plan-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+}
+
+.plan-cta--outline {
+  background: transparent;
+  color: var(--mr-blue, #0f35a0);
+  border: 2px solid var(--mr-blue, #0f35a0);
+}
+
+.plan-cta--outline:hover {
+  background: var(--mr-blue, #0f35a0);
+  color: #ffffff;
+}
+
+.plan-cta--featured {
+  background: #ffffff;
+  color: var(--mr-blue, #0f35a0);
+  border: 2px solid #ffffff;
+}
+
+.plan-cta--featured:hover {
+  background: rgba(255, 255, 255, 0.88);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ══════════════════════════════════════════
+   DESKTOP — 3 colunas lado a lado
+   ══════════════════════════════════════════ */
+@media (min-width: 900px) {
+  .plans-section {
+    padding: 120px 40px;
+  }
+
+  .plans-title {
+    font-size: 2.65rem;
+  }
+
+  .plans-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 24px;
+    margin-top: 56px;
+    align-items: stretch;
+  }
+
+  /* Ordem no desktop: Trimestral (1) | Anual (2) | Semestral (3) */
+  .plan-card:nth-child(1) { order: 1; } /* Trimestral */
+  .plan-card--featured    { order: 2; } /* Anual - centro */
+  .plan-card:nth-child(3) { order: 3; } /* Semestral */
+
+  .plan-card--featured {
+    transform: scale(1.03);
+    transform-origin: center top;
+    z-index: 2;
+  }
+
+  .plan-card--featured:hover {
+    transform: scale(1.03) translateY(-4px);
+  }
+
+  .plan-card {
+    padding: 44px 36px;
+  }
+}
+
+/* ══════════════════════════════════════════
+   TABLET — 2 colunas lado a lado
+   ══════════════════════════════════════════ */
+@media (min-width: 600px) and (max-width: 899px) {
+  .plans-section {
+    padding: 100px 32px;
+  }
+
+  .plans-title {
+    font-size: 2.4rem;
+  }
+
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 56px;
+  }
+
+  .plan-card--featured {
+    grid-column: 1 / -1;
+    max-width: 560px;
+    justify-self: center;
+    order: -1;
+  }
+}

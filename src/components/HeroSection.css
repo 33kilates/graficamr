@@ -1,0 +1,468 @@
+/* ============================================
+   HERO SECTION — MR Embalagens
+   Layout: 2 colunas (55/45) desktop, stack mobile
+   ============================================ */
+
+/* --- Base & Background --- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 80px; /* compensa header fixo */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #fdfaf6 100%);
+  overflow: hidden;
+}
+
+/* --- Formas geométricas decorativas (fundo) --- */
+.hero-bg-shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-shape {
+  position: absolute;
+}
+
+.hero-shape--red-diamond {
+  top: -8%;
+  right: 5%;
+  width: 320px;
+  height: 320px;
+  background: var(--mr-red);
+  opacity: 0.04;
+  transform: rotate(45deg);
+  border-radius: 32px;
+}
+
+.hero-shape--blue-rectangle {
+  bottom: 8%;
+  left: -4%;
+  width: 400px;
+  height: 200px;
+  background: var(--mr-blue);
+  opacity: 0.03;
+  transform: rotate(-12deg);
+  border-radius: 24px;
+}
+
+.hero-shape--red-circle {
+  bottom: 20%;
+  right: 15%;
+  width: 180px;
+  height: 180px;
+  background: var(--mr-red);
+  opacity: 0.035;
+  border-radius: 50%;
+}
+
+.hero-shape--blue-triangle {
+  top: 30%;
+  left: 8%;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 170px solid var(--mr-blue);
+  opacity: 0.03;
+  transform: rotate(15deg);
+}
+
+.hero-shape--red-line {
+  top: 55%;
+  right: -2%;
+  width: 300px;
+  height: 6px;
+  background: var(--mr-red);
+  opacity: 0.06;
+  transform: rotate(-30deg);
+  border-radius: 3px;
+}
+
+/* --- Grid principal --- */
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* --- Coluna Copy (esquerda) --- */
+.hero-copy {
+  flex: 0 0 55%;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Pill / badge pre-headline */
+.hero-pill {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--mr-red);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(145, 15, 54, 0.08);
+  padding: 8px 18px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Headline */
+.hero-headline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.08;
+  color: var(--mr-blue);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.hero-headline__accent {
+  color: var(--mr-red);
+  position: relative;
+}
+
+/* Subheadline */
+.hero-subheadline {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+
+.hero-subheadline strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* --- CTAs --- */
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.hero-cta-primary {
+  padding: 18px 36px;
+  font-size: 1rem;
+}
+
+.hero-cta-secondary {
+  padding: 18px 28px;
+  font-size: 1rem;
+}
+
+/* Botão outline (secundário) */
+.btn-outline {
+  background: transparent;
+  color: var(--mr-blue);
+  border: 2px solid var(--mr-blue);
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-outline:hover {
+  background: var(--mr-blue);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 53, 160, 0.3);
+}
+
+/* --- Trust indicators --- */
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-trust__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.hero-trust__item svg {
+  color: var(--mr-green);
+  flex-shrink: 0;
+}
+
+/* --- Coluna Visual (direita) --- */
+.hero-visual {
+  flex: 0 0 45%;
+  max-width: 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formas decorativas atrás do card */
+.hero-visual__shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-visual__shape {
+  position: absolute;
+  border-radius: 24px;
+}
+
+.hero-visual__shape--1 {
+  top: -20px;
+  right: -20px;
+  width: 75%;
+  height: 75%;
+  background: linear-gradient(135deg, var(--mr-blue) 0%, var(--mr-blue-light) 100%);
+  opacity: 0.06;
+  transform: rotate(6deg);
+}
+
+.hero-visual__shape--2 {
+  bottom: -16px;
+  left: -16px;
+  width: 60%;
+  height: 55%;
+  background: linear-gradient(135deg, var(--mr-red) 0%, #c41449 100%);
+  opacity: 0.05;
+  transform: rotate(-4deg);
+  border-radius: 20px;
+}
+
+/* Card da imagem */
+.hero-visual__card {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-visual__card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.15),
+    0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-visual__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+/* ============================================
+   ANIMAÇÕES DE ENTRADA
+   ============================================ */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-pill {
+  animation: heroFadeUp 0.6s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.hero-headline {
+  animation: heroFadeUp 0.6s ease-out both;
+  animation-delay: 0.2s;
+}
+
+.hero-subheadline {
+  animation: heroFadeUp 0.6s ease-out both;
+  animation-delay: 0.35s;
+}
+
+.hero-ctas {
+  animation: heroFadeUp 0.6s ease-out both;
+  animation-delay: 0.5s;
+}
+
+.hero-trust {
+  animation: heroFadeUp 0.6s ease-out both;
+  animation-delay: 0.6s;
+}
+
+.hero-visual__card {
+  animation: heroFadeRight 0.8s ease-out both;
+  animation-delay: 0.4s;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-grid {
+    gap: 32px;
+  }
+
+  .hero-headline {
+    font-size: 2.75rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 24px;
+  }
+
+  .hero-grid {
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .hero-copy {
+    flex: 1 1 auto;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-pill {
+    align-self: center;
+    font-size: 0.6875rem;
+    text-align: center;
+  }
+
+  .hero-headline {
+    font-size: 2.25rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.0625rem;
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-primary,
+  .hero-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-trust {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-trust__item {
+    font-size: 0.8125rem;
+  }
+
+  .hero-visual {
+    flex: 1 1 auto;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Reduz formas decorativas no mobile */
+  .hero-shape--red-diamond {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-shape--blue-rectangle {
+    width: 220px;
+    height: 120px;
+  }
+
+  .hero-shape--red-circle {
+    display: none;
+  }
+
+  .hero-shape--blue-triangle {
+    display: none;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.875rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+
+  .hero-cta-primary,
+  .hero-cta-secondary {
+    padding: 16px 24px;
+    font-size: 0.9375rem;
+  }
+}
