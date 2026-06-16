@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Package, ShoppingBag, Box, Layers, Tag, Bookmark,
   Calendar, CreditCard, Ribbon, FileText, Folder,
-  Briefcase, Gift, Shirt, Archive, ClipboardList, Palette
+  Gift, Shirt, Archive, ClipboardList, Palette
 } from 'lucide-react';
 import './ProductsSection.css';
 

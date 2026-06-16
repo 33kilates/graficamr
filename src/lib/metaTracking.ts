@@ -20,7 +20,7 @@ function generateEventId(): string {
 }
 
 /** Hash SHA-256 para dados do usuário (CAPI exige hash) */
-async function sha256(value: string): Promise<string> {
+export async function sha256(value: string): Promise<string> {
   const encoder = new TextEncoder();
   const data = encoder.encode(value.trim().toLowerCase());
   const hashBuffer = await crypto.subtle.digest('SHA-256', data);
