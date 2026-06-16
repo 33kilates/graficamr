@@ -1,4 +1,5 @@
 import { Calendar, TrendingUp, Shield, CheckCircle2 } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './PlansSection.css';
 
 const WHATSAPP_NUMBER = '5519995021280';
@@ -135,6 +136,7 @@ export default function PlansSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`plan-cta ${plan.featured ? 'plan-cta--featured' : 'plan-cta--outline'}`}
+                onClick={() => trackContact(`Plans CTA — ${plan.name}`)}
               >
                 {plan.cta}
               </a>

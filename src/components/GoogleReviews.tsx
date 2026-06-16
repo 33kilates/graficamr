@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './GoogleReviews.css';
 
 const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/aTrqziuLzeMXKpsA7';
@@ -165,6 +166,7 @@ const GoogleReviews: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary gr-cta__btn"
+            onClick={() => trackContact('Google Reviews CTA')}
           >
             <MessageCircle size={20} />
             QUERO ESSA QUALIDADE NA MINHA MARCA

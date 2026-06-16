@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './TestimonialsSection.css';
 
 /**
@@ -58,6 +59,7 @@ const TestimonialsSection: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary testimonials-cta__btn"
+            onClick={() => trackContact('Testimonials CTA')}
           >
             <MessageCircle size={20} />
             FALAR COM UM ESPECIALISTA

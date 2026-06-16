@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './Header.css';
 
 const NAV_LINKS = [
@@ -101,6 +102,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="mr-header__cta"
+            onClick={() => trackContact('Header CTA')}
           >
             <MessageCircle size={18} strokeWidth={2.2} />
             <span>Fale Conosco</span>
@@ -156,6 +158,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="mr-mobile-overlay__cta"
+            onClick={() => trackContact('Header Mobile CTA')}
           >
             <MessageCircle size={20} strokeWidth={2.2} />
             <span>Fale Conosco</span>

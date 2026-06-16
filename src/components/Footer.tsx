@@ -1,4 +1,5 @@
 import { Phone, MapPin, MessageCircle } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './Footer.css';
 
 /* Ícone Instagram como SVG inline (lucide-react pode não exportar) */
@@ -84,6 +85,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Fale via WhatsApp"
               className="mr-footer__social-link"
+              onClick={() => trackContact('Footer WhatsApp Social')}
             >
               <MessageCircle size={20} strokeWidth={2} />
             </a>
@@ -136,6 +138,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-footer__contact-item"
+                onClick={() => trackContact('Footer WhatsApp')}
               >
                 <MessageCircle size={18} strokeWidth={2} />
                 <span>(19) 99502-1280</span>

@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './BottomCta.css';
 
 const WHATSAPP_URL =
@@ -45,6 +46,7 @@ export default function BottomCta() {
           target="_blank"
           rel="noopener noreferrer"
           className="bottom-cta__button btn-whatsapp"
+          onClick={() => trackContact('Bottom CTA')}
         >
           Falar Com Um Especialista
         </a>

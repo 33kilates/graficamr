@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { trackContact } from '../lib/metaTracking';
 import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
@@ -40,6 +41,7 @@ const HeroSection: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary hero-cta-primary"
+              onClick={() => trackContact('Hero CTA')}
             >
               <MessageCircle size={20} />
               QUERO ELEVAR MINHA MARCA
