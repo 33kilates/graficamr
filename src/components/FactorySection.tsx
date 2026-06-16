@@ -10,7 +10,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: 'Controle de Qualidade Rigoroso',
-    text: 'Cada lote passa por inspeção visual e estrutural. O lote 1 sai idêntico ao lote 10.000.',
+    text: 'Cada impresso passa por inspeção visual e estrutural. Utilizamos somente materiais de primeira linha, tintas padrão PANTONE e CMYK garantindo maior fidelidade e repetibilidade de cores em todo o lote e repetições futuras.',
   },
   {
     icon: Truck,

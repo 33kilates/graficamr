@@ -1,0 +1,194 @@
+/* ============================================================
+   ProductsSection — Catálogo de Produtos MR
+   Mobile-first · Grid responsivo · Cards com ícones
+   ============================================================ */
+
+.products-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
+  position: relative;
+}
+
+/* ── Header ── */
+.products-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.products-tag {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--mr-blue, #0f35a0);
+  background: rgba(15, 53, 160, 0.07);
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+
+/* ── Grid de cards ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* ── Card individual ── */
+.product-card {
+  background: #ffffff;
+  border: 1px solid #eef0f5;
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 28px rgba(15, 53, 160, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(15, 53, 160, 0.15);
+}
+
+/* Ícone */
+.product-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 53, 160, 0.06);
+  color: var(--mr-blue, #0f35a0);
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.product-card:hover .product-card__icon {
+  background: var(--mr-blue, #0f35a0);
+  color: #ffffff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Nome */
+.product-card__name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark, #1a1a2e);
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Descrição */
+.product-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-body, #5a5a6a);
+  margin: 0;
+}
+
+/* ── CTA ── */
+.products-cta {
+  text-align: center;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.products-cta__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--mr-blue, #0f35a0);
+  margin: 0;
+}
+
+.products-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 36px;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   TABLET — 2 colunas
+   ============================================================ */
+@media (min-width: 480px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* ============================================================
+   DESKTOP — 3 colunas
+   ============================================================ */
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .product-card {
+    padding: 28px 24px;
+  }
+}
+
+/* ============================================================
+   DESKTOP LARGO — 4 colunas
+   ============================================================ */
+@media (min-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ============================================================
+   MOBILE PEQUENO
+   ============================================================ */
+@media (max-width: 479px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 18px 14px;
+    gap: 8px;
+  }
+
+  .product-card__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .product-card__name {
+    font-size: 0.92rem;
+  }
+
+  .product-card__desc {
+    font-size: 0.82rem;
+  }
+
+  .products-cta__text {
+    font-size: 1.1rem;
+  }
+
+  .products-cta__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 0.9375rem;
+  }
+}

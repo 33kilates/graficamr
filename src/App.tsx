@@ -2,6 +2,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AgitationSection from './components/AgitationSection';
 import FactorySection from './components/FactorySection';
+import ProductsSection from './components/ProductsSection';
 import PlansSection from './components/PlansSection';
 import NichesSection from './components/NichesSection';
 import TestimonialsSection from './components/TestimonialsSection';
@@ -18,6 +19,7 @@ function App() {
         <HeroSection />
         <AgitationSection />
         <FactorySection />
+        <ProductsSection />
         <PlansSection />
         <NichesSection />
         <GoogleReviews />
