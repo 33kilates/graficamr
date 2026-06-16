@@ -123,11 +123,6 @@ const products: ProductCategory[] = [
     name: 'Produtos para Lojas e Shoppings',
     description: 'Linha completa de embalagens e materiais gráficos para o varejo físico.',
   },
-  {
-    icon: <Briefcase size={28} strokeWidth={1.6} />,
-    name: 'Portfólio Personalizado',
-    description: 'Portfólios e apresentações de marca com acabamento premium.',
-  },
 ];
 
 const ProductsSection: React.FC = () => {
