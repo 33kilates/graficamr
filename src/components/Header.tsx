@@ -64,65 +64,18 @@ export default function Header() {
         role="banner"
       >
         <div className="mr-header__inner">
-          {/* ── Logo SVG inline ── */}
+          {/* ── Logo oficial ── */}
           <a
             href="#inicio"
             className="mr-header__logo"
             aria-label="MR Gráfica e Embalagens — Início"
             onClick={(e) => handleNavClick(e, '#inicio')}
           >
-            <svg
-              viewBox="0 0 220 72"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mr-header__logo-svg"
-              aria-hidden="true"
-            >
-              <text
-                x="4"
-                y="38"
-                fontFamily="Outfit, Arial, sans-serif"
-                fontWeight="800"
-                fontSize="42"
-                fill="#0f35a0"
-                letterSpacing="-1"
-              >
-                MR
-              </text>
-              <text
-                x="88"
-                y="20"
-                fontFamily="Outfit, Arial, sans-serif"
-                fontWeight="600"
-                fontSize="12"
-                fill="#910f36"
-              >
-                ®
-              </text>
-              <rect x="4" y="44" width="90" height="2.5" rx="1.25" fill="#910f36" />
-              <text
-                x="4"
-                y="56"
-                fontFamily="Inter, Arial, sans-serif"
-                fontWeight="600"
-                fontSize="10.5"
-                fill="#1a1a2e"
-                letterSpacing="1.8"
-              >
-                GRÁFICA E EMBALAGENS
-              </text>
-              <text
-                x="4"
-                y="68"
-                fontFamily="Inter, Arial, sans-serif"
-                fontWeight="500"
-                fontSize="9"
-                fill="#555"
-                letterSpacing="3.2"
-              >
-                PERSONALIZADAS
-              </text>
-            </svg>
+            <img
+              src="/images/logo-mr-oficial.jpeg"
+              alt="MR Gráfica e Embalagens Personalizadas"
+              className="mr-header__logo-img"
+            />
           </a>
 
           {/* ── Navegação desktop ── */}

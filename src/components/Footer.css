@@ -1,13 +1,14 @@
 /* ============================================================
    Footer — MR Gráfica e Embalagens
-   Mobile-first | 4 colunas em desktop | Dark premium
+   Mobile-first | 4 colunas em desktop | Fundo branco + cores da marca
    ============================================================ */
 
 .mr-footer {
-  background: var(--text-dark, #1a1a2e);
-  color: rgba(255, 255, 255, 0.75);
+  background: #ffffff;
+  color: var(--text-body, #4a4a5a);
   font-family: 'Inter', sans-serif;
   padding-top: 80px;
+  border-top: 3px solid var(--mr-red, #910f36);
 }
 
 /* ── Container interno ── */
@@ -20,23 +21,25 @@
   gap: 48px;
 }
 
-/* ── Logo SVG ── */
+/* ── Logo imagem ── */
 .mr-footer__logo {
   display: inline-block;
   text-decoration: none;
   margin-bottom: 20px;
 }
 
-.mr-footer__logo-svg {
-  width: 180px;
-  height: auto;
+.mr-footer__logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* ── Descrição da marca ── */
 .mr-footer__desc {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-body, #6b6b7a);
   max-width: 320px;
   margin-bottom: 24px;
 }
@@ -54,9 +57,9 @@
   width: 42px;
   height: 42px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  background: rgba(15, 53, 160, 0.06);
+  border: 1px solid rgba(15, 53, 160, 0.12);
+  color: var(--mr-blue, #0f35a0);
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -73,7 +76,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--mr-blue, #0f35a0);
   margin-bottom: 20px;
   letter-spacing: 0.3px;
   position: relative;
@@ -102,7 +105,7 @@
 }
 
 .mr-footer__link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-body, #5a5a6a);
   text-decoration: none;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -111,7 +114,7 @@
 }
 
 .mr-footer__link:hover {
-  color: #ffffff;
+  color: var(--mr-blue, #0f35a0);
   padding-left: 4px;
 }
 
@@ -129,14 +132,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-body, #5a5a6a);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
 a.mr-footer__contact-item:hover {
-  color: #ffffff;
+  color: var(--mr-blue, #0f35a0);
 }
 
 .mr-footer__contact-item svg {
@@ -147,7 +150,7 @@ a.mr-footer__contact-item:hover {
 /* ── Barra inferior ── */
 .mr-footer__bottom {
   margin-top: 56px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(15, 53, 160, 0.1);
   padding: 32px 0;
 }
 
@@ -164,13 +167,13 @@ a.mr-footer__contact-item:hover {
 
 .mr-footer__copyright {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-body, #8a8a9a);
   margin: 0;
 }
 
 .mr-footer__tagline {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--mr-red, #910f36);
   margin: 0;
 }
 

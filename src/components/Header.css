@@ -47,9 +47,11 @@
   flex-shrink: 0;
 }
 
-.mr-header__logo-svg {
-  height: 60px;
+.mr-header__logo-img {
+  height: 56px;
   width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 /* ── Nav desktop ── */
@@ -296,8 +298,8 @@
     padding: 0 16px;
   }
 
-  .mr-header__logo-svg {
-    height: 50px;
+  .mr-header__logo-img {
+    height: 46px;
   }
 }
 
