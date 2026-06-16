@@ -160,18 +160,24 @@ const ProductsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Transição para Planos */}
         <div className="products-cta">
           <p className="products-cta__text">
-            Não encontrou o que precisa? Fabricamos sob medida.
+            Tudo isso fabricado na nossa gráfica, com qualidade controlada do início ao fim.
           </p>
           <a
-            href="https://wa.me/5519995021280?text=Ol%C3%A1%2C%20quero%20saber%20quais%20produtos%20voc%C3%AAs%20oferecem%20para%20o%20meu%20segmento."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary products-cta__btn"
+            href="#planos"
+            className="products-cta__link"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('planos');
+              if (el) {
+                const top = el.getBoundingClientRect().top + window.scrollY - 70;
+                window.scrollTo({ top, behavior: 'smooth' });
+              }
+            }}
           >
-            SOLICITAR CATÁLOGO COMPLETO
+            Veja os planos e escolha o ideal para sua demanda ↓
           </a>
         </div>
       </div>

@@ -37,7 +37,7 @@ const NichesSection: React.FC = () => {
         <div className="niches-header">
           <span className="niches-tag">SOLUÇÕES POR SEGMENTO</span>
           <h2 className="niches-title">
-            Embalagens Projetadas Para o Seu Mercado
+            Cada Segmento Exige Uma Embalagem Diferente
           </h2>
           <p className="niches-subtitle">
             Cada segmento tem exigências únicas. Por isso, desenvolvemos soluções

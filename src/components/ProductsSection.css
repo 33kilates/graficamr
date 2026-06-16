@@ -112,12 +112,21 @@
   margin: 0;
 }
 
-.products-cta__btn {
+.products-cta__link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--mr-red, #910f36);
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.products-cta__link:hover {
+  color: var(--mr-blue, #0f35a0);
   gap: 10px;
-  padding: 18px 36px;
-  font-size: 1rem;
 }
 
 /* ============================================================
